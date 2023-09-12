@@ -28,19 +28,19 @@ class MenuPage extends StatelessWidget {
                       color: Colors.lightGreenAccent,
                       child: Padding(padding: const EdgeInsets.symmetric(horizontal: 10.0),
                       child: Column(
-                        children: [SizedBox(height: 40), SizedBox(height: 40)],
+                        children: [SizedBox(height: 40), SizedBox(height: 35)],
                       )),
                     ),
-                    SizedBox(height: 20),
+                    SizedBox(height: 25),
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: 100,
+                      height: 90,
                       child: ListView(
                         scrollDirection: Axis.horizontal,
                         children: [
                           Row(
                             children: [
-                              SizedBox(width: 10),
+                              SizedBox(width: 15),
                               Container(
                                 width: 100,
                                 child: Column(
@@ -1543,43 +1543,45 @@ class MenuPage extends StatelessWidget {
           ),
           Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(20.0).copyWith(bottom: 0),
-                  child: Container(
-                    child: Row(
-                      children: [
-                        Expanded(
-                          child: Container(
-                            margin: EdgeInsets.only(right: 5), 
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              border: Border.all(color: Colors.grey),  
-                              borderRadius: BorderRadius.circular(4),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(10.0),
-                              child: Row(
-                                children: [
-                                  Icon(Icons.search, size: 16, color: Colors.grey), SizedBox(width: 5), 
-                                  Text('Cari',style: TextStyle(color: Colors.grey, fontSize: 13)),
-                              ]),
+                Container(
+                  color: Colors.lightGreenAccent,
+                  child: Padding(
+                    padding: const EdgeInsets.all(20.0).copyWith(bottom: 20.0),
+                    child: Container(
+                      child: Row(
+                        children: [
+                          Expanded(
+                            child: Container(
+                              margin: EdgeInsets.only(right: 5), 
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                border: Border.all(color: Colors.grey),  
+                                borderRadius: BorderRadius.circular(4),
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsets.all(10.0),
+                                child: Row(
+                                  children: [
+                                    Icon(Icons.search, size: 16, color: Colors.grey), SizedBox(width: 5), 
+                                    Text('Cari',style: TextStyle(color: Colors.grey, fontSize: 13)),
+                                ]),
+                              ),
                             ),
                           ),
-                        ),
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 5),
-                          child: Icon(Icons.shopping_cart)),
                           Container(
-                          margin: EdgeInsets.symmetric(horizontal: 5),
-                          child: Icon(Icons.notifications)),
-                        Container(
-                          margin: EdgeInsets.symmetric(horizontal: 5),
-                          child: Icon(Icons.message_rounded)),
-                      ],
+                            margin: EdgeInsets.symmetric(horizontal: 5),
+                            child: Icon(Icons.shopping_cart)),
+                            Container(
+                            margin: EdgeInsets.symmetric(horizontal: 5),
+                            child: Icon(Icons.notifications)),
+                          Container(
+                            margin: EdgeInsets.symmetric(horizontal: 5),
+                            child: Icon(Icons.message_rounded)),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-                Divider()
               ],
             ),
         ],
